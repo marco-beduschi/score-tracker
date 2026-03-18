@@ -1,0 +1,19 @@
+{
+  "short_name": "Placar",
+  "name": "Placar digital simples",
+  "icons": [
+    {
+      "src": "/images/icon_512px.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/icon_192px.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "prefer_related_applications": false
+}
