@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --color-primary: #33ff7a;
+  --color-secondary: #330281;
+  --font-size: 10rem;
+
+  @media only screen and (min-width: 1024px) {
+    --font-size: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  :root {
+    --font-size: 5rem;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scoreboard {
+  height: 100%;
+  width: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-inline: -20%;
+}
+
+/* .scoreboard__divider {
+  height: 100%;
+  width: 100px;
+  background:
+    conic-gradient(from 45deg at left, #fff, #fff 1deg 89deg, #0000 90deg)
+      left/51% 60px repeat-y,
+    conic-gradient(from -135deg at right, #fff, #fff 1deg 89deg, #0000 90deg)
+      100% calc(50% + 30px) / 51% 60px repeat-y;
+} */
+
+.number-stepper__wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.number-stepper__wrapper--team-1 {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  mask:
+    conic-gradient(from 20deg at left, #0000, #000 1deg 139deg, #0000 140deg)
+      left/51% 164.85px repeat-y,
+    conic-gradient(from -160deg at right, #0000, #000 1deg 139deg, #0000 140deg)
+      100% calc(50% + 82.42px) / 51% 164.85px repeat-y;
+}
+
+.number-stepper__wrapper--team-2 {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  mask:
+    conic-gradient(from 20deg at left, #0000, #000 1deg 139deg, #0000 140deg)
+      left/51% 164.85px repeat-y,
+    conic-gradient(from -160deg at right, #0000, #000 1deg 139deg, #0000 140deg)
+      100% calc(50% + 82.42px) / 51% 164.85px repeat-y;
+}
+
+.number-stepper,
+.number-stepper__wrapper {
+  flex: 1 1 auto;
+}
+
+.number-stepper {
+  height: var(--font-size);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.number-stepper::-webkit-scrollbar {
+  display: none;
+}
+
+.number-stepper__item {
+  font-size: var(--font-size);
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+}
+
